@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thbui <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 15:38:32 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/09 15:47:47 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/11 18:12:11 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 
 int ft_isalpha (char c)
 {
@@ -20,11 +20,9 @@ int ft_isalpha (char c)
 		return (0);
 }
 
-/*int main()
+int main()
 {
 	char c = '2';
 	printf("%d", ft_isalpha(c));
 	return (0);
 }
-*/
-

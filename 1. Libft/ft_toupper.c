@@ -1,40 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 17:48:40 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/11 19:02:48 by thbui            ###   ########.fr       */
+/*   Created: 2023/01/11 18:56:42 by thbui             #+#    #+#             */
+/*   Updated: 2023/01/11 19:00:15 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-int ft_strchr (char *str, char c)
+char	ft_toupper(char c)
 {
-    int i;
-
-    i = 0;
-    while (str[i] != '\0')
-    {
-        if (str[i] == c)
-        {
-            return (c);
-            break;
-        }
-        i++;
+	if (c >= 'a' && c <= 'z')
+	{
+        c -= 32;
+        return (c);
     }
-    return (0);
+    else   
+        return (c);
 }
 
+/*
 #include <stdio.h>
-
-int main (void)
+int main ()
 {
-    char str[] = "hello world";
-    char c = 'h';
-
-    printf("%d", ft_strchr(str, c));
-    return (0);
+    char c = ' ';
+    printf("%c", ft_toupper(c));
+    return(0);
 }
+*/
