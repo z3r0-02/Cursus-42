@@ -1,29 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 17:48:40 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/11 19:29:32 by thbui            ###   ########.fr       */
+/*   Created: 2023/01/11 19:23:59 by thbui             #+#    #+#             */
+/*   Updated: 2023/01/11 19:30:38 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_strlen(char *str)
+{
+	int	i;
 
-int ft_strchr (char *str, char c)
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+int ft_strrchr(char *str, char c)
 {
     int i;
 
-    i = 0;
-    while (str[i] != '\0')
+    i = ft_strlen(str) - 1;
+    while (str[i])
     {
         if (str[i] == c)
         {
             return (i);
             break;
         }
-        i++;
+        i--;
     }
     return (0);
 }
@@ -35,6 +46,6 @@ int main (void)
     char str[] = "hello world";
     char c = 'l';
 
-    printf("%d", ft_strchr(str, c));
+    printf("%d", ft_strrchr(str, c));
     return (0);
 }

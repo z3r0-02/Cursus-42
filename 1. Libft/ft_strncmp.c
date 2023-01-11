@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thbui <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 19:55:58 by thbui             #+#    #+#             */
-/*   Updated: 2022/10/24 16:17:12 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/11 19:55:55 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
 #include <string.h>
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
