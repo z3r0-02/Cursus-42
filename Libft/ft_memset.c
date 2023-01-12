@@ -6,15 +6,22 @@
 /*   By: thbui <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 14:13:48 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/12 14:23:25 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/12 14:50:33 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memset(char *str, char c, int size)
+void *ft_memset(void *s, int c, size_t n)
 {
 	int	i;
+	unsigned char	*ch;
 
 	i = 0;
-	while (str[i] <= size)
+	ch = s;
+	while (n > 0)
 	{
-
+		ch[i] = 
+		i++;
+		n--;
+	}
+	return (s);
+}
