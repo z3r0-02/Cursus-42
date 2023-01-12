@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-int ft_strrchr(char *str, char c)
+int ft_strrchr(const char *str, int c)
 {
     int i;
 
@@ -43,8 +43,8 @@ int ft_strrchr(char *str, char c)
 
 int main (void)
 {
-    char str[] = "hello world";
-    char c = 'l';
+    const char str[] = "hello world";
+    int c = 'l';
 
     printf("%d", ft_strrchr(str, c));
     return (0);

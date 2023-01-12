@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 
-int ft_strchr (char *str, char c)
+int ft_strchr (const char *str, int c)
 {
     int i;
 
@@ -32,8 +32,8 @@ int ft_strchr (char *str, char c)
 
 int main (void)
 {
-    char str[] = "hello world";
-    char c = 'l';
+    const char str[] = "hello world";
+    int c = 'l';
 
     printf("%d", ft_strchr(str, c));
     return (0);

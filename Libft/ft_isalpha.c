@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 
-int ft_isalpha (char c)
+int ft_isalpha (int c)
 {
 	if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
 		return (1);
@@ -22,7 +22,7 @@ int ft_isalpha (char c)
 
 int main()
 {
-	char c = '2';
+	int c = '2';
 	printf("%d", ft_isalpha(c));
 	return (0);
 }

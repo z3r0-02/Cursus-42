@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_toupper(char c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{
@@ -25,7 +25,7 @@ char	ft_toupper(char c)
 #include <stdio.h>
 int main ()
 {
-    char c = ' ';
+    int c = ' ';
     printf("%c", ft_toupper(c));
     return(0);
 }

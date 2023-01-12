@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_tolower (char c)
+int	ft_tolower (int c)
 {
     if (c >= 'A' && c <= 'Z')
     {
@@ -24,7 +24,7 @@ char	ft_tolower (char c)
 #include <stdio.h>
 int main ()
 {
-    char c = '9';
+    int c = '9';
     printf("%c", ft_tolower(c));
     return(0);
 }
