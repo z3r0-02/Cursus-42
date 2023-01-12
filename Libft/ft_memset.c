@@ -3,25 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thbui <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 14:13:48 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/12 14:50:33 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/12 17:33:00 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void *ft_memset(void *s, int c, size_t n)
 {
 	int	i;
-	unsigned char	*ch;
 
 	i = 0;
-	ch = s;
-	while (n > 0)
+	while (n > i)
 	{
-		ch[i] = 
+		((char *)s)[i]  = c;
 		i++;
-		n--;
 	}
 	return (s);
 }

@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 19:23:59 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/12 15:12:36 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/12 17:51:57 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,30 +22,16 @@ int	ft_strlen(const char *str)
 	return (i);
 }
 
-int	ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
-	i = ft_strlen(str) - 1;
-	while (str[i])
+	i = ft_strlen(s) - 1;
+	while (i >= 0)
 	{
-		if (str[i] == c)
-		{
-			return (i);
-			break ;
-		}
+		if (s[i] == c)
+			return ((char *)(s + 1));
 		i--;
 	}
 	return (0);
-}
-
-#include <stdio.h>
-
-int main(void)
-{
-    const char  str[] = "hello world";
-    int c = 'l';
-
-    printf("%d", ft_strrchr(str, c));
-    return (0);
 }

@@ -6,35 +6,21 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:48:40 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/11 19:29:32 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/12 17:52:11 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-int ft_strchr (const char *str, int c)
+char *ft_strchr (const char *s, int c)
 {
     int i;
 
     i = 0;
-    while (str[i] != '\0')
+    while (s[i])
     {
-        if (str[i] == c)
-        {
-            return (i);
-            break;
-        }
+        if (s[i] == c)
+            return ((char *)(s + 1));
         i++;
     }
-    return (0);
-}
-
-#include <stdio.h>
-
-int main (void)
-{
-    const char str[] = "hello world";
-    int c = 'l';
-
-    printf("%d", ft_strchr(str, c));
     return (0);
 }

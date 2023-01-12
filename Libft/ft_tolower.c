@@ -6,11 +6,11 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 19:09:45 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/11 19:13:13 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/12 17:39:25 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower (int c)
+int	ft_tolower(int c)
 {
     if (c >= 'A' && c <= 'Z')
     {
