@@ -6,11 +6,21 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 19:23:59 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/13 15:44:21 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/13 16:23:58 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+int	ft_strlen(const char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
 
 char	*ft_strrchr(const char *s, int c)
 {

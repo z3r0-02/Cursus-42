@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:56:27 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/13 15:24:24 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/13 16:19:32 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stddef.h>
+
 
 int				ft_atoi(const char *str);
 void			ft_bzero(void *s, size_t n);
