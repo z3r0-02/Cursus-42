@@ -6,13 +6,11 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 19:55:58 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/11 19:55:55 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/13 15:22:55 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	i;
 

@@ -6,21 +6,20 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:48:40 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/12 17:52:11 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/13 15:32:20 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-char *ft_strchr (const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s[i])
-    {
-        if (s[i] == c)
-            return ((char *)(s + 1));
-        i++;
-    }
-    return (0);
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
+			return ((char *)(s + 1));
+		i++;
+	}
+	return (0);
 }

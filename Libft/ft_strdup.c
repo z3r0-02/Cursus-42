@@ -3,25 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thbui <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 21:01:31 by thbui             #+#    #+#             */
-/*   Updated: 2022/11/01 22:46:58 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/13 15:44:28 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strcpy(char *dest, char *src)
 {
@@ -46,11 +35,4 @@ char	*ft_strdup(char *src)
 		return (NULL);
 	else
 		return (ft_strcpy(dest, src));
-}
-
-int	main(void)
-{
-	char s1[] = "Some text";
-	printf("Source is: %s and dest: %s", s1, ft_strdup(s1));
-	return (0);
 }

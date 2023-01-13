@@ -6,26 +6,26 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 19:09:45 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/12 17:39:25 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/13 15:43:45 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
-    if (c >= 'A' && c <= 'Z')
-    {
-        c += 32;
-        return (c);
-    }
-    else
-	    return (c);
+	if (c >= 'A' && c <= 'Z')
+	{
+		c += 32;
+		return (c);
+	}
+	else
+		return (c);
 }
 /*
 #include <stdio.h>
-int main ()
+int	main()
 {
-    int c = '9';
-    printf("%c", ft_tolower(c));
-    return(0);
+	int c = '9';
+	printf("%c", ft_tolower(c));
+	return(0);
 }
 */
