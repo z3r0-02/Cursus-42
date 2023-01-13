@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 19:55:58 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/13 16:20:54 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/13 21:35:32 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,19 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	i;
+	unsigned char	*p1;
+	unsigned char	*p2;
 
 	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	p1 = (unsigned char *)s1;
+	p2 = (unsigned char *)s2;
+	while ((p1[i] != '\0' || p2[i] != '\0') && i < n)
 	{
-		if (s1[i] > s2[i])
+		if (p1[i] > p2[i])
 		{
 			return (1);
 		}
-		else if (s1[i] < s2[i])
+		else if (p1[i] < p2[i])
 		{
 			return (-1);
 		}
