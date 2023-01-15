@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 15:48:08 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/15 20:22:06 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/15 20:29:24 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,14 +57,6 @@ char *ft_strtrim(char const *s1, char const *set)
 	len = ft_strlen(s1) - lenght_check(s1, set);
 	i = 0;
 	s = 0;
-	if (len == 0)
-	{
-		res = malloc(1 * sizeof(char));
-		if (!res)
-			return (NULL);
-		res[i] = '\0';
-		return (res);
-	}
 	res = malloc((len + 1) * sizeof(char));
 	if (!res)
 		return (NULL);
