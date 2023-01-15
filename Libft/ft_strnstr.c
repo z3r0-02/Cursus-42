@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:36:09 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/14 18:30:43 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/15 15:35:29 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		return ((char *)haystack);
 	if (len == 0)
 		return (NULL);
-	while (haystack[i] != '\0' && i < len - ft_strlen(needle))
+	while (haystack[i] != '\0' && i <= len - ft_strlen(needle))
 	{
 		if (cmp(&haystack[i], needle))
 			return ((char *)&haystack[i]);

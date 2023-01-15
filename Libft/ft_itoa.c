@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 22:26:12 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/15 00:22:43 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/15 13:29:05 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_allocate(int n)
 	return (len);
 }
 
-char *minz(int n, int i, char *res)
+char	*minz(int n, int i, char *res)
 {
 	if (n == 0)
 		res[0] = n + '0';

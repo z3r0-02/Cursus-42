@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:35:54 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/14 00:53:57 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/15 14:07:35 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	str = s;
 	i = 0;
+	while (c > 127)
+		c = c % 128;
 	while (n > i)
 	{
 		if (str[i] == c)
