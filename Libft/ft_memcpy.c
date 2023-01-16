@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 22:34:52 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/13 15:45:04 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/16 03:01:42 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	dst = (char *)dest;
 	sr = (char *)src;
+	if (!dest && !src)
+		return (NULL);
 	while (i < n)
 	{
 		dst[i] = sr[i];

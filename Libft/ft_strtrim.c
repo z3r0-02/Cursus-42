@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 15:48:08 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/15 20:29:24 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/15 20:45:57 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ int	set_check(const char c, char const *set)
 	}
 	return (0);
 }
-int lenght_check(const char *s1, const char *set)
+
+int	lenght_check(const char *s1, const char *set)
 {
 	int	i;
 	int	len;
@@ -47,7 +48,7 @@ int lenght_check(const char *s1, const char *set)
 	return (yes);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*res;
 	int		len;

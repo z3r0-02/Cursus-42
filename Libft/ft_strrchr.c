@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 19:23:59 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/15 14:06:08 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/16 05:28:02 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strrchr(const char *s, int c)
 	int	i;
 
 	i = ft_strlen(s) - 1;
-	if (!s)
-		return (0);
 	while (c > 127)
 		c = c % 128;
 	if (s[i + 1] == '\0' && c == '\0')
