@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 00:20:59 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/16 05:38:57 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/16 20:01:36 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,26 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char		*dest;
-	const char	*source;
 	size_t		i;
 
-	dest = dst;
-	source = src;
 	i = 0;
 	if (!dst && !src)
 		return (NULL);
-	if (dest < source)
+	if (dst < src)
 	{
 		while (i < len)
 		{
-			dest[i] = source[i];
+			((char *)dst)[i] = ((char *)src)[i];
 			i++;
 		}
 	}
-	else if (dest > source)
+	else if (dst > src)
 	{
 		while (len > i)
 		{
-			dest[len - 1] = source[len - 1];
+			((char *)dst)[len - 1] = ((char *)src)[len - 1];
 			len--;
 		}
 	}
-	return (dest);
+	return (dst);
 }
