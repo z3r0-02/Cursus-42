@@ -6,18 +6,18 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:35:57 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/14 18:30:12 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/17 19:28:37 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }

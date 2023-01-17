@@ -1,18 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 18:56:42 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/17 19:07:41 by thbui            ###   ########.fr       */
+/*   Created: 2023/01/17 17:25:21 by thbui             #+#    #+#             */
+/*   Updated: 2023/01/17 18:51:26 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include "libft.h"
+
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if (c >= 'a' && c <= 'z')
-		c -= 32;
-	return (c);
+	t_list	*start;
+	t_list	*temp;
+
+	if (!lst || !f || !del)
+		return (NULL);
+	start = 0;
+	while (lst)
+	{
+		temp = ft_lstnew((*f)(lst->content));
+		if (!temp)
+		{
+			ft_lstclear(&start, (*del));
+			return (NULL);
+		}
+		else
+			ft_lstadd_back(&start, temp);
+		lst = lst->next;
+	}
+	return (start);
 }

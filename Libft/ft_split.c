@@ -6,13 +6,13 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 16:24:33 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/16 20:17:15 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/17 19:00:47 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	array_count(const char *s, char c)
+static int	array_count(const char *s, char c)
 {
 	int	num;
 	int	i;
@@ -33,7 +33,7 @@ int	array_count(const char *s, char c)
 	return (num);
 }
 
-char	*allocate(int *i, int j, const char *s)
+static char	*allocate(int *i, int j, const char *s)
 {
 	char	*res;
 

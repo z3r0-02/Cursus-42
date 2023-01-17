@@ -6,13 +6,13 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:36:09 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/16 17:02:12 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/17 19:04:52 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	cmp(const char *str, const char *compare)
+static int	cmp(const char *str, const char *compare)
 {
 	int	i;
 

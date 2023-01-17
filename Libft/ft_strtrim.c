@@ -6,13 +6,13 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 15:48:08 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/15 20:45:57 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/17 19:05:15 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	set_check(const char c, char const *set)
+static int	set_check(const char c, char const *set)
 {
 	unsigned int	i;
 
@@ -26,7 +26,7 @@ int	set_check(const char c, char const *set)
 	return (0);
 }
 
-int	lenght_check(const char *s1, const char *set)
+static int	lenght_check(const char *s1, const char *set)
 {
 	int	i;
 	int	len;

@@ -6,13 +6,13 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 22:26:12 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/15 13:29:05 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/17 18:57:16 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_allocate(int n)
+static int	ft_allocate(int n)
 {
 	int	len;
 
@@ -34,7 +34,7 @@ int	ft_allocate(int n)
 	return (len);
 }
 
-char	*minz(int n, int i, char *res)
+static char	*minz(int n, int i, char *res)
 {
 	if (n == 0)
 		res[0] = n + '0';

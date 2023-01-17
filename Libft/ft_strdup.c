@@ -6,13 +6,13 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 21:01:31 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/13 15:44:28 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/17 19:15:59 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, char *src)
+static char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ char	*ft_strcpy(char *dest, char *src)
 	return (dest);
 }
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	char	*dest;
 
@@ -34,5 +34,5 @@ char	*ft_strdup(char *src)
 	if (dest == NULL)
 		return (NULL);
 	else
-		return (ft_strcpy(dest, src));
+		return (ft_strcpy(dest, (char *)src));
 }

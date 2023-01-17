@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 19:32:34 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/16 04:56:28 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/17 19:19:38 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
-	if ((int)start > ft_strlen(s))
+	if (start > ft_strlen(s))
 	{
 		res = malloc(sizeof(char));
 		if (!res)
@@ -26,7 +26,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		res[0] = '\0';
 		return (res);
 	}
-	if ((size_t)start + len > (size_t)ft_strlen(s))
+	if (start + len > ft_strlen(s))
 		len = ft_strlen(s) - start;
 	res = malloc((len + 1) * sizeof(char));
 	if (!res)
