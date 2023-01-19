@@ -6,21 +6,21 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 22:26:12 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/17 18:57:16 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/19 13:55:03 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_allocate(int n)
+static int	ft_allocate(int n)	//returns the size needed for malloc
 {
 	int	len;
 
 	len = 0;
 	if (n == 0)
 		len++;
-	if (n == -2147483648)
-		len += 11;
+	if (n == -2147483648)	//number too large, needs it's own condition
+		len += 11;			//lenght of this number
 	else if (n < 0)
 	{
 		len++;
@@ -28,13 +28,13 @@ static int	ft_allocate(int n)
 	}
 	while (n > 0)
 	{
-		n = n / 10;
+		n = n / 10;			//modulo, gives the remainder
 		len++;
 	}
 	return (len);
 }
 
-static char	*minz(int n, int i, char *res)
+static char	*minz(int n, int i, char *res)	//returns the result for n == 0, or n == -2147483648
 {
 	if (n == 0)
 		res[0] = n + '0';

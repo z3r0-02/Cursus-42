@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:25:21 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/17 18:51:26 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/19 13:58:15 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*start;
-	t_list	*temp;
+	t_list	*temp;		//temporary lst
 
 	if (!lst || !f || !del)
 		return (NULL);
@@ -23,7 +23,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst)
 	{
 		temp = ft_lstnew((*f)(lst->content));
-		if (!temp)
+		if (!temp)		//if (*f) fails, deletes the lst
 		{
 			ft_lstclear(&start, (*del));
 			return (NULL);

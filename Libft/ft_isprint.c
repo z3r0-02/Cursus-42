@@ -6,13 +6,13 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:46:23 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/13 15:41:15 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/19 13:47:06 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 126)
+	if (c >= 32 && c <= 126)	//moulinette does accept 127 as well
 		return (1);
 	else
 		return (0);

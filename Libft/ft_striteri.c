@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 20:31:57 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/18 17:59:33 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/19 14:28:10 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		return ;
 	while (s[i])
 	{
-		f(i, s + i);
+		(*f)(i, s + i);
 		i++;
 	}
 }
