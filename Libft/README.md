@@ -11,3 +11,11 @@ Tested with francinette(works best with Mac): https://github.com/xicodomingues/f
  <br>&ensp; &ensp; the combination of libft-war-machine and libftTester might not be enough to pass
  <br><br> GOOD LUCK :heart:
  <br> Don't get discouraged if you find yourself stuck, or behind your peers, keep going and you shall make it :running:
+ <hr>
+ <h3> My testing:
+<br><br>
+<img width="1000" alt="image" src="https://user-images.githubusercontent.com/118228827/213783032-4588136e-3c76-489c-ad9b-426552005e58.png">
+<img width="1000" alt="image" src="https://user-images.githubusercontent.com/118228827/213783040-2f08a3f6-80bb-4ba5-9c7a-910ed15a30ed.png">
+<img width="1000" alt="image" src="https://user-images.githubusercontent.com/118228827/213785351-492c74ad-05a1-40f4-ac5c-375355e5642a.png">
+<img width="1000" alt="image" src="https://user-images.githubusercontent.com/118228827/213785928-679192bf-0c22-4b3a-b48a-66a04e7cfa21.png">
+
