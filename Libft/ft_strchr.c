@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:48:40 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/19 14:39:23 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/20 17:43:02 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	}
 	if (s[i] == c)
-		return ((char *)(s + i));
+		return ((char *)(&s[i]));	//the same as (s + i)
 	return (0);
 }

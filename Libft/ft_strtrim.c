@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 15:48:08 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/19 14:47:18 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/20 17:32:18 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	}
 	res[i] = '\0';	//no need to check *set at the end of *s1, because the len has cut them out
-}	
+	return (res);
+}

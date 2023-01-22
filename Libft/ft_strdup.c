@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 21:01:31 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/17 19:15:59 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/20 17:43:16 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,5 @@ char	*ft_strdup(const char *src)
 	dest = malloc((ft_strlen(src) + 1) * sizeof(char));
 	if (dest == NULL)
 		return (NULL);
-	else
-		return (ft_strcpy(dest, (char *)src));
+	return (ft_strcpy(dest, (char *)src));
 }
