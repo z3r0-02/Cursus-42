@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 17:56:47 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/23 02:42:23 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/23 13:54:59 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,13 @@ char	*ft_strjoin(char *s1, char *s2)
 	int		i;
 	int		j;
 
+	if (!s2)
+		return (NULL);
 	if (!s1)
 	{
 		s1 = malloc(sizeof(char) * 1);
 		s1[0] = '\0';
 	}
-	if (!s2)
-		return (NULL);
 	res = malloc((ft_strlen(s1) + ft_strlen(s2)) + 1 * sizeof(char));
 	if (!res)
 		return (NULL);
