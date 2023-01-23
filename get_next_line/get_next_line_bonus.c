@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 23:50:33 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/23 00:28:34 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/23 02:43:19 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_allocate_next(char *str)
 
 char	*ft_get_line(char *str)
 {
-	int	i;
+	int		i;
 	char	*the_line;
 
 	i = 0;
@@ -66,33 +66,40 @@ char	*ft_get_line(char *str)
 	return (the_line);
 }
 
-char *get_next_line(int fd)
+char	*ft_read_fd(int fd, char *str)
 {
-	static char *str[1024];
-	char	*buffer;
-	char	*line;
-	int		bytes_read;
+	char		*buffer;
+	int			bytes_read;
 
-	// if (fd < 0 || BUFFER_SIZE <= 0)
-	// 	return (0);
-	buffer = malloc(sizeof(char) * (BUFFER_SIZE + 1));		//BUFFER_SIZE will be declared in the test
+	buffer = malloc (sizeof(char) * BUFFER_SIZE + 1);	//BUFFER_SIZE will be declared in the test
 	if (!buffer)
 		return (NULL);
-	bytes_read = 1;											//starting with value 1
-	while (bytes_read != 0 && !ft_strchr(str[fd], '\n'))	//after the first loop, we need to check if '\n' was already read,
-	{														//if not the loop continues
-		bytes_read = read(fd, buffer, BUFFER_SIZE); 		//returns a number of bytes read and saves it to *buffer
-		if (bytes_read == -1)								//if there is an error while reading the file descriptor
+	bytes_read = 1;										//starting with value 1
+	while (bytes_read != 0 && !ft_strchr(str, '\n'))	//after the first loop, we need to check if '\n' was already read,
+	{													//if not the loop continues
+		bytes_read = read(fd, buffer, BUFFER_SIZE); 	//returns a number of bytes read and saves it to *buffer
+		if (bytes_read == -1)							//if there is an error while reading the file descriptor
 		{
 			free(buffer);
 			return (NULL);
 		}
 		buffer[bytes_read] = '\0';
-		str[fd] = ft_strjoin(str[fd], buffer);
+		str = ft_strjoin(str, buffer);
 	}
 	free(buffer);
-	// if (!str[fd])
-	// 	return (NULL);
+	return (str);
+}
+
+char	*get_next_line(int fd)
+{
+	static char	*str[1024];
+	char		*line;
+
+	if (fd < 0 || BUFFER_SIZE <= 0)
+		return (0);
+	str[fd] = ft_read_fd(fd, str[fd]);
+	if (!str[fd])
+		return (NULL);
 	line = ft_get_line(str[fd]);							//get's one line, from str
 	str[fd] = ft_allocate_next(str[fd]);					//allocates the memory for next string, if the function is called again
 	return (line);

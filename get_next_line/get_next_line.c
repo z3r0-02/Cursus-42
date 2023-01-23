@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 18:29:29 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/23 00:39:51 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/23 02:40:24 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_allocate_next(char *str)
 
 char	*ft_get_line(char *str)
 {
-	int	i;
+	int		i;
 	char	*the_line;
 
 	i = 0;
@@ -63,15 +63,11 @@ char	*ft_get_line(char *str)
 	return (the_line);
 }
 
-char *get_next_line(int fd)
+char	*ft_read_fd(int fd, char *str)
 {
-	static char *str;
 	char		*buffer;
-	char		*line;
 	int			bytes_read;
 
-	// if (fd < 0 || BUFFER_SIZE <= 0)
-	// 	return (0);
 	buffer = malloc (sizeof(char) * BUFFER_SIZE + 1);	//BUFFER_SIZE will be declared in the test
 	if (!buffer)
 		return (NULL);
@@ -88,6 +84,19 @@ char *get_next_line(int fd)
 		str = ft_strjoin(str, buffer);
 	}
 	free(buffer);
+	return (str);
+}
+
+char	*get_next_line(int fd)
+{
+	static char	*str;
+	char		*line;
+
+	if (fd < 0 || BUFFER_SIZE <= 0)
+		return (0);
+	str = ft_read_fd(fd, str);
+	if (!str)
+		return (0);
 	line = ft_get_line(str);							//get's one line, from str
 	str = ft_allocate_next(str);						//allocates the memory for next string, if the function is called again
 	return (line);

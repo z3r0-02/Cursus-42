@@ -6,13 +6,13 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 23:50:55 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/22 23:53:14 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/23 02:42:27 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)	//this function searches for '\n', if '\n' is found the loop won't begin
 {
 	int	i;
 
@@ -42,7 +42,6 @@ size_t	ft_strlen(char *str)
 	return (i);
 }
 
-// need to allocate 1 char for \0 if s1 empty (its empty every call)
 char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*res;
@@ -59,13 +58,10 @@ char	*ft_strjoin(char *s1, char *s2)
 	res = malloc((ft_strlen(s1) + ft_strlen(s2)) + 1 * sizeof(char));
 	if (!res)
 		return (NULL);
-	i = 0;
+	i = -1;
 	j = 0;
-	while (s1[i])
-	{
+	while (s1[++i])
 		res[i] = s1[i];
-		i++;
-	}
 	while (s2[j])
 		res[i++] = s2[j++];
 	res[i] = '\0';
