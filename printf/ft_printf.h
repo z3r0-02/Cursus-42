@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 17:42:38 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/26 21:54:19 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/26 22:35:39 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdarg.h>
 # include <stdlib.h>
+# include <stdint.h>
 
 // typedef struct s_print
 // {
@@ -35,9 +36,9 @@
 int			ft_printf(const char *str, ...);
 int			ft_putchar(char c);
 int			ft_putstr(char *s);
+int			ft_len(uintptr_t nb);
 int			ft_putnbr(int n);
 int			ft_print_address(uintptr_t nb);
-int			print_hex(unsigned long int nb);
 int			ft_uns_decimal(unsigned int nb);
 int			ft_hexadecimal(unsigned int nb, char spc);
 

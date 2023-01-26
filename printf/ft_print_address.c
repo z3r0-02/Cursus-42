@@ -6,13 +6,13 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 17:31:52 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/26 21:52:00 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/26 22:35:22 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_ptr_len(uintptr_t nb)
+int	ft_len(uintptr_t nb)
 {
 	int	len;
 
@@ -52,7 +52,7 @@ int	ft_print_address(uintptr_t nb)
 	else
 	{
 		ft_put_ptr(nb);
-		print_length += ft_ptr_len(nb);
+		print_length += ft_len(nb);
 	}
 	return (print_length);
 }

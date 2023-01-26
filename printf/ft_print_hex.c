@@ -6,23 +6,35 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 17:33:39 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/26 21:20:12 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/26 22:34:21 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_hexadecimal(unsigned int nb, char type)
+int	ft_hexadecimal(unsigned int nb, char type)
 {
 	char	*hex;
 
+	if (nb == 0)
+		return (write(1, "0", 1));
 	if (type == 'x')
 		hex = "0123456789abcdef";
 	else
 		hex = "0123456789ABCDEF";
-	if (nb > 9)
+	if (nb >= 16)
+	{
 		ft_hexadecimal(nb / 16, type);
-	return (write(1, &hex[nb % 16], 1));
+		ft_hexadecimal(nb % 16, type);
+	}
+	else
+	{
+		if (nb <= 9)
+			ft_putchar((nb + '0'));
+		else
+			write(1, &hex[nb % 16], 1);
+	}
+	return (ft_len(nb));
 }
 
 int ft_uns_decimal(unsigned int nb)
