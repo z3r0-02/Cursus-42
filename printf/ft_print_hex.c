@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 17:33:39 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/26 22:34:21 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/27 16:25:44 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ int	ft_hexadecimal(unsigned int nb, char type)
 	return (ft_len(nb));
 }
 
-int ft_uns_decimal(unsigned int nb)
+int	ft_uns_decimal(unsigned int nb)
 {
 	int		counter;
-	char 	*dec;
+	char	*dec;
 
 	dec = "0123456789";
 	counter = 0;

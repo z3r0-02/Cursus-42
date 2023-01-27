@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putstr_char.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 18:36:39 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/26 19:59:32 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/27 16:27:06 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ int	ft_putchar(char c)
 int	ft_putstr(char *s)
 {
 	if (!s)
-		return(write(1, "(null)", 6));
-	return (write(1 , s, ft_strlen(s)));
+		return (write(1, "(null)", 6));
+	return (write(1, s, ft_strlen(s)));
 }
