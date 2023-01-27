@@ -1,4 +1,15 @@
-# PROJECT
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/01/27 16:35:42 by thbui             #+#    #+#              #
+#    Updated: 2023/01/27 16:37:05 by thbui            ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CC		= gcc
 CFLAGS	= -Wall -Werror -Wextra
 NAME	= libftprintf.a
@@ -11,11 +22,12 @@ all: $(NAME)
 
 $(NAME): $(SRC:.c=.o)
 			$(LIBC) $(NAME) $(OBJ)
+
 clean:
-	$(RM)	$(OBJ)
+	$(RM) $(OBJ)
 
 fclean: clean
-		$(RM)	$(NAME)
+		$(RM) $(NAME)
 
 re:	fclean	$(NAME)
 
