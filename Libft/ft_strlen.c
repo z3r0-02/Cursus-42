@@ -6,11 +6,11 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:35:57 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/13 16:23:23 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/14 18:30:12 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	i;
 
