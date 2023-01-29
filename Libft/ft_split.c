@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 16:24:33 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/16 20:10:36 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/16 20:17:15 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 int	array_count(const char *s, char c)
 {
-	int num;
-	int i;
+	int	num;
+	int	i;
+
 	num = 0;
 	i = 0;
 	while (s[i])
@@ -35,6 +36,7 @@ int	array_count(const char *s, char c)
 char	*allocate(int *i, int j, const char *s)
 {
 	char	*res;
+
 	res = (char *)malloc((j + 1) * sizeof(char));
 	if (!res)
 		return (NULL);
@@ -45,10 +47,11 @@ char	*allocate(int *i, int j, const char *s)
 
 char	**ft_split(char const *s, char c)
 {
-		char	**res;
-		int		i;
-		int		j;
-		int		ar;
+	char	**res;
+	int		i;
+	int		j;
+	int		ar;
+
 	i = 0;
 	res = (char **)malloc((array_count(s, c) + 1) * sizeof(char *));
 	if (!res)
@@ -65,5 +68,5 @@ char	**ft_split(char const *s, char c)
 			res[ar++] = allocate(&i, j, s);
 	}
 	res[ar] = NULL;
-return (res);
+	return (res);
 }

@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:56:27 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/16 16:32:05 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/16 20:16:03 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,5 @@ void			ft_putnbr_fd(int n, int fd);
 // void			ft_lstiter(t_list *lst, void (*f)(void *));
 // t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 // 					void (*del)(void *));
-					
+
 #endif
