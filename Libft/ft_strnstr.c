@@ -6,13 +6,13 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:36:09 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/14 00:23:38 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/14 00:50:28 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int cmp(const char *str, const char *compare)
+int	cmp(const char *str, const char *compare)
 {
 	int	i;
 
@@ -34,7 +34,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	i = 0;
 	if (*needle == '\0')
-		return (char *)haystack;
+		return ((char *)haystack);
 	if (len == 0)
 		return (NULL);
 	while (haystack[i] != '\0' && i < len - ft_strlen((char *)needle))

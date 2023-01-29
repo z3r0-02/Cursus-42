@@ -6,17 +6,17 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 00:20:59 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/14 00:16:18 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/14 00:55:56 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*dest;
+	char		*dest;
 	const char	*source;
-	size_t	i;
+	size_t		i;
 
 	dest = dst;
 	source = src;

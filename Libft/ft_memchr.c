@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:35:54 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/13 23:00:19 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/14 00:53:57 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const char *str;
-	size_t	i;
+	const char	*str;
+	size_t		i;
 
 	str = s;
 	i = 0;

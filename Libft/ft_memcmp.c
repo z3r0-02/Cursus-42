@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:33:40 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/13 22:47:21 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/14 00:53:37 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const unsigned char	*p1;
-	const unsigned char *p2;
-	int	i;
+	const unsigned char	*p2;
+	int					i;
 
 	i = 0;
 	p1 = s1;
