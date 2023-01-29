@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 16:24:33 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/17 19:00:47 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/18 17:38:31 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ char	**ft_split(char const *s, char c)
 	int		ar;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	res = (char **)malloc((array_count(s, c) + 1) * sizeof(char *));
 	if (!res)
 		return (NULL);

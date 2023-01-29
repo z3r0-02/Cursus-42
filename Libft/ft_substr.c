@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 19:32:34 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/17 19:19:38 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/18 18:04:35 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	if (start > ft_strlen(s))
 	{
 		res = malloc(sizeof(char));
@@ -32,11 +34,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!res)
 		return (NULL);
 	while (i < len)
-	{
-		res[i] = s[start];
-		i++;
-		start++;
-	}
+		res[i++] = s[start++];
 	res[i] = '\0';
 	return (res);
 }

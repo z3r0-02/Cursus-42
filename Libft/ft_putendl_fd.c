@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 18:53:58 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/14 18:57:04 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/18 17:31:32 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
 }

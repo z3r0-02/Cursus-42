@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 22:39:41 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/17 19:17:21 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/18 17:51:54 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	i;
 	size_t	j;
 
+	if (!dest && !size)
+		return (0);
 	i = 0;
 	j = ft_strlen(dest);
 	if (size <= j)

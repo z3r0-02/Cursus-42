@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 19:49:23 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/14 20:29:30 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/18 17:39:58 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	res = malloc(ft_strlen(s) * sizeof(char) + 1);
-	if (!s || !f || !res)
+	if (!f || !res)
 		return (NULL);
 	while (s[i])
 	{

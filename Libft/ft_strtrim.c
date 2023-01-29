@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 15:48:08 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/17 19:05:15 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/18 18:00:29 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		i;
 	int		s;
 
+	if (!s1 || !set)
+		return (NULL);
 	len = ft_strlen(s1) - lenght_check(s1, set);
 	i = 0;
 	s = 0;

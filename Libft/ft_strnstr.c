@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 22:36:09 by thbui             #+#    #+#             */
-/*   Updated: 2023/01/17 19:04:52 by thbui            ###   ########.fr       */
+/*   Updated: 2023/01/18 17:43:10 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ static int	cmp(const char *str, const char *compare)
 			return (0);
 		i++;
 	}
-	if (compare[i] == '\0')
-		return (1);
-	return (0);
+	return (compare[i] == '\0');
 }
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
@@ -37,7 +35,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		return ((char *)haystack);
 	if (*needle == '\0')
 		return ((char *)haystack);
-	if (len == 0 || len < (size_t)ft_strlen(needle))
+	if (len == 0)
 		return (NULL);
 	while (haystack[i] != '\0' && i <= len - ft_strlen(needle))
 	{
