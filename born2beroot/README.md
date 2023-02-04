@@ -80,5 +80,5 @@ To not have to write your own script to the monitoring.sh, you can <a href="http
 <br>(after installing it with ``apt-get install wget``)
   - you can use the command ```wget https://raw.githubusercontent.com/HEADLIGHTER/Born2BeRoot-42/main/monitoring.sh```
 
-Don't forget to copy it for the evaluation as the key changes everytime you run it. To get the key to push it to the school repository use `sha1sum <name_of_the_file>.vdi`
+Don't forget to make copies of your project for the evaluation as the key changes everytime you run it. To get the key to push it to the school repository use `sha1sum <name_of_the_file>.vdi`
 
