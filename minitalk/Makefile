@@ -6,7 +6,7 @@
 #    By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/02 22:59:18 by thbui             #+#    #+#              #
-#    Updated: 2023/05/08 16:23:54 by thbui            ###   ########.fr        #
+#    Updated: 2023/05/08 16:28:20 by thbui            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,19 +36,10 @@ $(NAME): libft $(SERVER_OBJS) $(CLIENT_OBJS)
 	@$(GCC) $(FLAGS) $(SERVER_OBJS) $(LIB) -o $(SERVER_NAME)
 	@$(GCC) $(FLAGS) $(CLIENT_OBJS) $(LIB) -o $(CLIENT_NAME)
 
-# libft:
-# 	@$(MAKE) -C libft
-
 # $(NAME): libft server client
 
 libft:
 	@$(MAKE) -C $(LIBFT)
-
-# server: $(SERVER_OBJS)
-# 	@$(GCC) $(FLAGS) $(SERVER_OBJS) $(LIB) -o $(SERVER_NAME)
-
-# client: $(CLIENT_OBJS)
-# 	@$(GCC) $(FLAGS) $(CLIENT_OBJS) $(LIB) -o $(CLIENT_NAME)
 
 clean:
 	@rm -rf $(OBJS)
