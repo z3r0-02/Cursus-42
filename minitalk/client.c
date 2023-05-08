@@ -6,11 +6,11 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 22:59:25 by thbui             #+#    #+#             */
-/*   Updated: 2023/05/08 16:02:31 by thbui            ###   ########.fr       */
+/*   Updated: 2023/05/08 16:30:28 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#include "libft/libft.h"
 
 void ft_send_each_bits(int PID, char c)
 {

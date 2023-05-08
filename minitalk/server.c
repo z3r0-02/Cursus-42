@@ -6,11 +6,11 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 22:59:27 by thbui             #+#    #+#             */
-/*   Updated: 2023/05/08 15:49:42 by thbui            ###   ########.fr       */
+/*   Updated: 2023/05/08 16:30:17 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#include "libft/libft.h"
 
 void	ft_sig_handler(int sig)
 {
