@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 17:42:38 by thbui             #+#    #+#             */
-/*   Updated: 2023/05/08 15:31:07 by thbui            ###   ########.fr       */
+/*   Updated: 2023/05/11 14:58:51 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ int			ft_print_address(uintptr_t nb);
 int			ft_uns_decimal(unsigned int nb);
 int			ft_hexadecimal(unsigned int nb, char spc);
 char		*ft_strchr(const char *s, int c);
+int			ft_atoi(const char *str);
 
 #endif

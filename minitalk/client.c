@@ -6,7 +6,7 @@
 /*   By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 22:59:25 by thbui             #+#    #+#             */
-/*   Updated: 2023/05/08 16:30:28 by thbui            ###   ########.fr       */
+/*   Updated: 2023/05/11 14:58:58 by thbui            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void ft_send_each_bits(int PID, char c)
 			kill(PID, SIGUSR1);		//sends 1
 		else if ((c & 1 << bit) == 0)
 			kill(PID, SIGUSR2);		//sends 0
-		usleep(100);
+		usleep(128);
 		bit++;
 	}
 }
@@ -34,7 +34,7 @@ int	main(int argc, char **argv)
 	static int	i;
 
 	i = 0;
-	PID = atoi(argv[1]);
+	PID = ft_atoi(argv[1]);
 
 	if (argc != 3 || !ft_strchr("1234567890", argv[1][i]))
 		return (ft_printf("error"));

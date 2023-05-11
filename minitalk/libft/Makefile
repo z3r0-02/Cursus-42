@@ -6,14 +6,14 @@
 #    By: thbui <thbui@student.42prague.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/27 16:35:42 by thbui             #+#    #+#              #
-#    Updated: 2023/05/08 15:54:45 by thbui            ###   ########.fr        #
+#    Updated: 2023/05/11 14:59:11 by thbui            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		= gcc
 CFLAGS	= -Wall -Werror -Wextra
 NAME	= libft.a
-SRC	= ft_printf.c ft_putnbr.c ft_putstr_char.c ft_print_address.c ft_print_hex.c ft_strchr.c
+SRC	= ft_printf.c ft_putnbr.c ft_putstr_char.c ft_print_address.c ft_print_hex.c ft_strchr.c ft_atoi.c
 OBJ	= $(SRC:.c=.o)
 LIBC	= ar rc
 RM		= rm -f
